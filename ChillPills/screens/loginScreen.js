@@ -15,6 +15,7 @@ const loginScreen = () => {
 };
 
 export default loginScreen;
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
