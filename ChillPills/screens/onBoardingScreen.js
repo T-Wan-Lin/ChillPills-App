@@ -19,7 +19,7 @@ const Dots = ({selected}) => {
     );
 
 }
-const Skip = (... props) => (
+const Skip = (...props) => (
     <Button 
         title='Skip'
         color = "#8A584C"
@@ -27,7 +27,7 @@ const Skip = (... props) => (
     />
 
 );
-const Next = ({... props}) => (
+const Next = ({...props}) => (
     <Button 
         title='Next'
         color = "#8A584C"
@@ -35,7 +35,7 @@ const Next = ({... props}) => (
     />
 
 );
-const Done = ({... props}) => (
+const Done = ({...props}) => (
     <TouchableOpacity
         style={{marginHorizontal:10}}
         {...props}
@@ -69,7 +69,7 @@ const onBoardingScreen = ({navigation}) => {
             subtitle: 'Earn ChillCoins to Customise Your Friendly Pets!',
           },
           {
-            backgroundColor: '#FEF6E2',
+            backgroundColor: '#FCF6E2',
             image: <Image source={require('../assets/onboard-img3.png')} />,
             title: 'Get Started with Us!',
             subtitle: 'Login or Create a New Account',
