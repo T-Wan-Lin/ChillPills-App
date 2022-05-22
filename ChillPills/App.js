@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import {createStackNavigator } from '@react-navigation/stack';
 
@@ -9,7 +9,7 @@ import AsyncStorage, { AsyncStorageHook } from '@react-native-async-storage/asyn
 
 const AppStack = createStackNavigator();
 const App = () => {
-  const [isFirstLaunch, setIsFirstLaunch] = React.useState(null);
+  const [isFirstLaunch, setIsFirstLaunch] = useState(null); //is this what's causing the hook error?
 
   useEffect(() => {
     AsyncStorage.getItem('alreadyLaunched').then(value => {
@@ -42,7 +42,5 @@ const App = () => {
   }
   
 }
-
-  
 
 export default App;
