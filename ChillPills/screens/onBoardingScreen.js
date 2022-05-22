@@ -12,7 +12,7 @@ import Onboarding from 'react-native-onboarding-swiper';
 
 const Dots = selected => {
   let backgroundColor;
-  backgroundColor = selected ? 'rgba(0, 0 , 0, 0.8)' : 'rgba(0, 0, 0, 0.3)';
+  backgroundColor = selected ? 'rgba(0, 0 , 0, 0.8)' : 'rgba(0, 0, 0, 0.1)';
 
   return (
     <View
@@ -29,7 +29,7 @@ const Skip = props => <Button title="Skip" color="#8A584C" {...props} />;
 const Next = props => <Button title="Next" color="#8A584C" {...props} />;
 const Done = props => (
   <TouchableOpacity style={{marginHorizontal: 10}} {...props}>
-    <Text style={{fontSize: 18}}>Done</Text>
+    <Text style={{fontSize: 17}}>Done</Text>
   </TouchableOpacity>
 );
 
@@ -52,9 +52,8 @@ const onBoardingScreen = ({navigation}) => {
         {
           backgroundColor: '#FCF6E2',
           image: <Image source={require('../assets/onboard-img2.png')} />,
-          title:
-            'A New Way to Incoporate Breaks into Your Schedule without Guilt',
-          subtitle: 'Earn ChillCoins to Customise Your Friendly Pets!',
+          title: 'Incoporate Breaks into Your Schedule',
+          subtitle: 'Earn ChillCoins to Customise Your Pets!',
         },
         {
           backgroundColor: '#FCF6E2',
