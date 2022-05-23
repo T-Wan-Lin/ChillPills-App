@@ -6,7 +6,7 @@ const loginScreen = () => {
   const {height} = useWindowDimensions();
   return (
     <View style={styles.root}>
-      <Image source = {Logo} style ={[styles.logo, {height: height * 0.3}]}
+      <Image source = {Logo} style ={[styles.logo, {height: height * 0.5}]}
       resizeMode = "contain" />
     </View>
   );
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: '70%',
-    maxWidth: 100,
-    maxHeight: 100,
+    maxWidth: 150,
+    maxHeight: 150,
   },
 });
