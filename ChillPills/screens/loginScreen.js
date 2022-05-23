@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
-import {View, Text, Button, StyleSheet, Image, useWindowDimensions} from 'react-native';
+import {View, Text, Button, StyleSheet, Image, useWindowDimensions, Input} from 'react-native';
 import Logo from '../assets/loginLogo.png';
 import CustomInput from '../Components/CustomInput';
+import CustomButton from '../Components/CustomButton';
+
 
 const loginScreen = () => {
   const[email,setEmail] = useState('');
@@ -15,6 +17,7 @@ const loginScreen = () => {
 
       <CustomInput placeholder= "Email" value ={email} setValue={setEmail} />
       <CustomInput placeholder = "Password" value ={password} setValue={setPassword} secureTextEntry={true}/>
+      <CustomButton />
     </View>
   );
 };
