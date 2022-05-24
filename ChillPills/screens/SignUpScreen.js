@@ -1,29 +1,26 @@
 import React, {useState} from 'react';
-import {View, Text, Button, StyleSheet, Image, useWindowDimensions, Input} from 'react-native';
-import Logo from '../assets/loginLogo.png';
+import {View, Text, Button, StyleSheet, Input} from 'react-native';
 import CustomInput from '../Components/CustomInput';
 import CustomButton from '../Components/CustomButton';
 
 
-const loginScreen = () => {
+const SignUpScreen = () => {
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState(''); 
-  const onLoginPressed = () => {
-    console.warn("Log In");
+  const[passwordRepeat,setPasswordRepeat] = useState('');
+  const onRegisterPressed = () => {
+    console.warn("Register");
   };
-  const onForgetPressed= () => {
-    console.warn("Forgot Password");
+  const onSignUpGoogle= () => {
+    console.warn("Google Sign Up");
   };
-  const onLoginGoogle= () => {
-    console.warn("Google Login");
+  const onLoginPressed= () => {
+    console.warn("Redirecting to Login Page");
   };
-  const onSignUpPressed= () => {
-    console.warn("Redirecting to Sign Up Page");
-  };
-  const {height} = useWindowDimensions();
+
   return (
     <View style={styles.root}>
-      <Image source = {Logo} style ={[styles.logo, {height: height * 0.5}]} resizeMode = "contain" />
+      <Text style = {styles.title}>Create An Account</Text>
 
       <CustomInput 
       placeholder= "Email" 
@@ -37,35 +34,35 @@ const loginScreen = () => {
       setValue={setPassword} 
       secureTextEntry={true}
       />
-      
-      <CustomButton 
-      text = "Log in" 
-      onPress ={onLoginPressed}
+      <CustomInput 
+      placeholder = "Repeat Password" 
+      value ={passwordRepeat} 
+      setValue={setPasswordRepeat} 
+      secureTextEntry={true}
       />
       
       <CustomButton 
-      text = "Forgot Password?" 
-      onPress ={onForgetPressed} 
-      type ="TERTIARY"
+      text = "Register" 
+      onPress ={onRegisterPressed}
       />
       
       <CustomButton 
-      text = "Log in with Google" 
-      onPress ={onLoginGoogle}
+      text = "Sign Up with Google" 
+      onPress ={onSignUpGoogle}
       bgColor = "#FAE9EA"
       fgColor="#DD4D44"
       />
 
       <CustomButton 
-      text = "First-time user? Create an Account!" 
-      onPress ={onSignUpPressed} 
+      text = "Already have an Account? Login!" 
+      onPress ={onLoginPressed} 
       type ="TERTIARY"
       />
     </View>
   );
 };
 
-export default loginScreen;
+export default SignUpScreen;
 
 const styles = StyleSheet.create({
   root: {
@@ -79,5 +76,11 @@ const styles = StyleSheet.create({
     width: '70%',
     maxWidth: 150,
     maxHeight: 150,
+  },
+  title: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      color: "#8A584C",
+      margin: 10,
   },
 });
