@@ -8,6 +8,12 @@ import CustomButton from '../Components/CustomButton';
 const loginScreen = () => {
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState(''); 
+  const onLoginPressed = () => {
+    console.warn("Log In");
+  };
+  const onForgetPressed= () => {
+    console.warn("Forgot Password");
+  };
 
   const {height} = useWindowDimensions();
   return (
@@ -17,7 +23,8 @@ const loginScreen = () => {
 
       <CustomInput placeholder= "Email" value ={email} setValue={setEmail} />
       <CustomInput placeholder = "Password" value ={password} setValue={setPassword} secureTextEntry={true}/>
-      <CustomButton />
+      <CustomButton text = "Log in" onPress ={onLoginPressed}/>
+      <CustomButton text = "Forgot Password?" onPress ={onForgetPressed} type ="TERTIARY"/>
     </View>
   );
 };
