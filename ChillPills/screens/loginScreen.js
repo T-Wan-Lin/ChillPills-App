@@ -14,6 +14,9 @@ const loginScreen = () => {
   const onForgetPressed= () => {
     console.warn("Forgot Password");
   };
+  const onLoginGoogle= () => {
+    console.warn("Google Login");
+  };
 
   const {height} = useWindowDimensions();
   return (
@@ -25,6 +28,8 @@ const loginScreen = () => {
       <CustomInput placeholder = "Password" value ={password} setValue={setPassword} secureTextEntry={true}/>
       <CustomButton text = "Log in" onPress ={onLoginPressed}/>
       <CustomButton text = "Forgot Password?" onPress ={onForgetPressed} type ="TERTIARY"/>
+      <CustomButton text = "Log in with Google" onPress ={onLoginGoogle}/>
+
     </View>
   );
 };
