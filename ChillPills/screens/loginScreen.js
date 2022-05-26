@@ -3,24 +3,37 @@ import {View, Text, Button, StyleSheet, Image, useWindowDimensions, Input} from 
 import Logo from '../assets/loginLogo.png';
 import CustomInput from '../Components/CustomInput';
 import CustomButton from '../Components/CustomButton';
+import { useNavigation } from '@react-navigation/native';
 
 
 const loginScreen = () => {
   const[email,setEmail] = useState('');
+
   const[password,setPassword] = useState(''); 
+  const {height} = useWindowDimensions();
+  const navigation = useNavigation();
+
+
+
   const onLoginPressed = () => {
-    console.warn("Log In");
+    //console.warn("Log In");
+    navigation.navigate('Choose A Pet!');
+    
   };
   const onForgetPressed= () => {
-    console.warn("Forgot Password");
+    //console.warn("Forgot Password");
+    navigation.navigate('Reset Password');
   };
   const onLoginGoogle= () => {
     console.warn("Google Login");
   };
   const onSignUpPressed= () => {
-    console.warn("Redirecting to Sign Up Page");
+    //console.warn("Redirecting to Sign Up Page");
+    navigation.navigate('Sign Up'); 
   };
-  const {height} = useWindowDimensions();
+
+  
+
   return (
     <View style={styles.root}>
       <Image source = {Logo} style ={[styles.logo, {height: height * 0.5}]} resizeMode = "contain" />

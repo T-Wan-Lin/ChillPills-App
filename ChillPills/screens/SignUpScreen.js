@@ -2,20 +2,25 @@ import React, {useState} from 'react';
 import {View, Text, Button, StyleSheet, Input} from 'react-native';
 import CustomInput from '../Components/CustomInput';
 import CustomButton from '../Components/CustomButton';
+import { useNavigation } from '@react-navigation/native';
+
 
 
 const SignUpScreen = () => {
   const[email,setEmail] = useState('');
   const[password,setPassword] = useState(''); 
   const[passwordRepeat,setPasswordRepeat] = useState('');
+  const navigation = useNavigation();
   const onRegisterPressed = () => {
-    console.warn("Register");
+    //console.warn("Register");
+    navigation.navigate('Choose A Pet!');
   };
   const onSignUpGoogle= () => {
     console.warn("Google Sign Up");
   };
   const onLoginPressed= () => {
-    console.warn("Redirecting to Login Page");
+    //console.warn("Redirecting to Login Page");
+    navigation.navigate('Login');
   };
 
   return (
@@ -66,7 +71,7 @@ export default SignUpScreen;
 
 const styles = StyleSheet.create({
   root: {
-    //flex: 1,
+    flex: 1,
     alignItems: 'center',
     //justifyContent: 'center',
     padding: 50,
