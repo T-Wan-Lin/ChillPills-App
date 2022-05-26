@@ -28,12 +28,12 @@ const Dots = selected => {
 const Skip = props => <Button title="Skip" color="#8A584C" {...props} />;
 const Next = props => <Button title="Next" color="#8A584C" {...props} />;
 const Done = props => (
-  <TouchableOpacity style={{marginHorizontal: 10}} {...props}>
-    <Text style={{fontSize: 17}}>Done</Text>
+  <TouchableOpacity style={{ marginHorizontal: 10 }} {...props}>
+    <Text style={{ fontSize: 17 }}>Done</Text>
   </TouchableOpacity>
 );
 
-const onBoardingScreen = ({navigation}) => {
+const onBoardingScreen = ({ navigation }) => {
   return (
     <Onboarding
       SkipButtonComponent={Skip}
