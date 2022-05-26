@@ -5,7 +5,7 @@ import { View, Text } from 'react-native'
 const ResetPasswordScreen = () => {
   return (
     <View>
-      <Text>ResetPasswordScreen</Text>
+      <Text>ResetPasswordScreen is under construction </Text>
     </View>
   )
 }

@@ -15,9 +15,6 @@ const SignUpScreen = () => {
     //console.warn("Register");
     navigation.navigate('Choose A Pet!');
   };
-  const onSignUpGoogle= () => {
-    console.warn("Google Sign Up");
-  };
   const onLoginPressed= () => {
     //console.warn("Redirecting to Login Page");
     navigation.navigate('Login');
@@ -51,12 +48,7 @@ const SignUpScreen = () => {
       onPress ={onRegisterPressed}
       />
       
-      <CustomButton 
-      text = "Sign Up with Google" 
-      onPress ={onSignUpGoogle}
-      bgColor = "#FAE9EA"
-      fgColor="#DD4D44"
-      />
+      
 
       <CustomButton 
       text = "Already have an Account? Login!" 

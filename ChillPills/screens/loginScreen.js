@@ -17,16 +17,15 @@ const loginScreen = () => {
 
   const onLoginPressed = () => {
     //console.warn("Log In");
-    navigation.navigate('Choose A Pet!');
+    //validate user
+    navigation.navigate('Home');
     
   };
   const onForgetPressed= () => {
     //console.warn("Forgot Password");
     navigation.navigate('Reset Password');
   };
-  const onLoginGoogle= () => {
-    console.warn("Google Login");
-  };
+
   const onSignUpPressed= () => {
     //console.warn("Redirecting to Sign Up Page");
     navigation.navigate('Sign Up'); 
@@ -60,13 +59,6 @@ const loginScreen = () => {
       text = "Forgot Password?" 
       onPress ={onForgetPressed} 
       type ="TERTIARY"
-      />
-      
-      <CustomButton 
-      text = "Log in with Google" 
-      onPress ={onLoginGoogle}
-      bgColor = "#FAE9EA"
-      fgColor="#DD4D44"
       />
 
       <CustomButton 
