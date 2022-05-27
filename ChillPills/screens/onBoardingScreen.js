@@ -10,6 +10,9 @@ import {
 } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
 
+//This is the first screen that users will see when they first launch the app
+//Function: Gives them an introduction to the app
+
 const Dots = selected => {
   let backgroundColor;
   backgroundColor = selected ? 'rgba(0, 0 , 0, 0.8)' : 'rgba(0, 0, 0, 0.1)';

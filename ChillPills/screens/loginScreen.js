@@ -14,6 +14,8 @@ import CustomButton from '../Components/CustomButton';
 import { useNavigation } from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 
+//for users with exisiting accounts
+
 const loginScreen = () => {
   const [email, setEmail] = useState('');
 
