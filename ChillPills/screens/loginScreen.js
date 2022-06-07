@@ -16,7 +16,7 @@ import auth from '@react-native-firebase/auth';
 
 //for users with exisiting accounts
 
-const loginScreen = () => {
+const LoginScreen = () => {
   const [email, setEmail] = useState('');
 
   const [password, setPassword] = useState('');
@@ -104,7 +104,7 @@ const loginScreen = () => {
   );
 };
 
-export default loginScreen;
+export default LoginScreen;
 
 const styles = StyleSheet.create({
   root: {

@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import OnBoardingScreen from './screens/OnBoardingScreen';
-import loginScreen from './screens/loginScreen';
+import LoginScreen from './screens/LoginScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import ChoosePetScreen from './screens/ChoosePetScreen';
 import HomeScreen from './screens/HomeScreen';
@@ -16,7 +16,7 @@ const App = () => {
     <NavigationContainer>
       <AppStack.Navigator headerShown="false">
         <AppStack.Screen name="OnBoarding" component={OnBoardingScreen} />
-        <AppStack.Screen name="Login" component={loginScreen} />
+        <AppStack.Screen name="Login" component={LoginScreen} />
         <AppStack.Screen name="Sign Up" component={SignUpScreen} />
         <AppStack.Screen
           name="Reset Password"
