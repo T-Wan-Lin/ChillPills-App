@@ -36,7 +36,7 @@ const Done = props => (
   </TouchableOpacity>
 );
 
-const onBoardingScreen = ({ navigation }) => {
+const OnBoardingScreen = ({ navigation }) => {
   return (
     <Onboarding
       SkipButtonComponent={Skip}
@@ -69,7 +69,7 @@ const onBoardingScreen = ({ navigation }) => {
   );
 };
 
-export default onBoardingScreen;
+export default OnBoardingScreen;
 
 const styles = StyleSheet.create({
   container: {

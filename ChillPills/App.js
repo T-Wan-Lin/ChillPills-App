@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import onBoardingScreen from './screens/onBoardingScreen';
+import OnBoardingScreen from './screens/OnBoardingScreen';
 import loginScreen from './screens/loginScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import ChoosePetScreen from './screens/ChoosePetScreen';
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <AppStack.Navigator headerShown="false">
-        <AppStack.Screen name="OnBoarding" component={onBoardingScreen} />
+        <AppStack.Screen name="OnBoarding" component={OnBoardingScreen} />
         <AppStack.Screen name="Login" component={loginScreen} />
         <AppStack.Screen name="Sign Up" component={SignUpScreen} />
         <AppStack.Screen
