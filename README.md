@@ -4,6 +4,9 @@ Hello, we are Wan Lin and Aatmika from Team 5334.
 
 This is our Orbital application, ChillPills.
 
+# Note for Testers
+Do note that it is an iOS application due to the usage of an iOS-exclusive external library. iOS emulator set-up and environment is necessary.
+
 # About Chillpills
 Motivation: 
 
@@ -17,3 +20,6 @@ Aim:
 
 We hope that with our application, users will be able to incorporate regular breaks into their routines and perform activities that improve their mental and physical health, which in turn helps prevent burnouts. 
 
+# Acknowledgements
+
+React-Native Onboarding Swiper from: https://github.com/jfilter/react-native-onboarding-swiper 
