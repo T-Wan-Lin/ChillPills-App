@@ -14,9 +14,11 @@ import CustomButton from '../Components/CustomButton';
 import { useNavigation } from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 
-//for users with exisiting accounts
+
+
 
 const LoginScreen = () => {
+  //for users with exisiting accounts i did not have this when i was doing the UI
   const [email, setEmail] = useState('');
 
   const [password, setPassword] = useState('');
@@ -34,6 +36,7 @@ const LoginScreen = () => {
       setInitializing(false);
     }
   }
+// this is what happens when the user presses on the buttons
 
   useEffect(() => {
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
@@ -45,20 +48,21 @@ const LoginScreen = () => {
   const onLoginPressed = async () => {
     //console.warn("Log In");
     //validate user
-    try {
-      await auth().signInWithEmailAndPassword(email, password);
+    //try {
+     // await auth().signInWithEmailAndPassword(email, password);
       //await console.log(auth().currentUser);
       //await console.log(user+5);
       //await console.debug('user+5');
-    } catch (e) {
-      console.log(e);
-    }
-    if (user) {
-      await console.warn(user);
-      navigation.navigate('Home');
-    }
+   // } catch (e) {
+    //  console.log(e);
+    //}
+    //if (user) {
+     // await console.warn(user);
+     // navigation.navigate('Home');
+   // }
 
-    //navigation.navigate('Home');
+    navigation.navigate('Home');
+    console.warn('On backend, I need to store user choice');
   };
   const onForgetPressed = () => {
     //console.warn("Forgot Password");
